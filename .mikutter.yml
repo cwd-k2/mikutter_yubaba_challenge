@@ -1,0 +1,11 @@
+---
+name: 湯婆婆命名チャレンジ
+slug: :mikutter_yubaba_challenge
+description: mikutterから湯婆婆命名チャレンジ(https://shindanmaker.com/696416)をするプラグインです。
+depends:
+  mikutter: '3.6'
+  plugin:
+  - world
+  - spell
+version: '1.0'
+author: d_flat_aug7
