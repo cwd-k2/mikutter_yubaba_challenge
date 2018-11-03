@@ -13,7 +13,7 @@ Plugin.create(:mikutter_yubaba_challenge) do
   def challenge_shindan
     https = Net::HTTP.new('shindanmaker.com', 443)
     https.use_ssl = true
-    res = https.post("/696416", "u=#{UserConfig[:yubaba_challenge_default_profile]}")
+    res = https.post("/696416", "u=#{UserConfig[:yubaba_challenge_default_name]}")
     doc = Nokogiri::HTML.parse(res.body)
     return doc.xpath('//textarea').first.inner_text
   end
