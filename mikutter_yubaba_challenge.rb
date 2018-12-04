@@ -20,7 +20,7 @@ Plugin.create(:mikutter_yubaba_challenge) do
 
   def post_n_update
     text = challenge_shindan
-    name = text[/返事をするんだ、(.*?)！/, 1]
+    name = text[/お前の名前は(.*?)だ/, 1]
     world, = Plugin.filtering(:world_current, nil)
     update_profile_name(world, name: name) if UserConfig[:yubaba_challenge_update_profile]
     compose(world, body: text)
